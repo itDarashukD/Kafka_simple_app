@@ -1,0 +1,13 @@
+First of all you have to start Kafka zookeeper server on your comp.machine :
+zookeeper-server-start.bat
+Second deal is run  : kafka-server-start
+Third: connect-standalone  ???
+
+overall of this must run with this configs!
+zookeeper.properties
+server.properties
+consumer.properties
+
+
+
+
