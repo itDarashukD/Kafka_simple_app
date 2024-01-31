@@ -1,12 +1,18 @@
 First of all you have to start Kafka zookeeper server on your comp.machine :
-zookeeper-server-start.bat
-Second deal is run  : kafka-server-start
-Third: connect-standalone  ???
+0. download Kakfa
+1. run zookeeper-server-start.bat   --> .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+2. run  : kafka-server-start   --> .\bin\windows\kafka-server-start.bat .\config\server.properties
+3:  create topic --> kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1  --topic test
+4. run producer --> kafka-console-producer.bat --broker-list localhost:9092 --topic test
+5. run consumer --> kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning
 
-overall of this must run with this configs!
-zookeeper.properties
-server.properties
-consumer.properties
+
+stop: -->
+.\bin\windows\zookeeper-server-stop.bat .\config\zookeeper.properties
+
+.\bin\windows\kafka-server-stop.bat .\config\server.properties
+
+ 
 
 
 
